@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { tabs } from '@/constants/Catagory';
 
 function Offers() {
+    //@ts-ignore
     const [showAllTabs, setShowAllTabs] = useState(false);
     const [activeTabId, setActiveTabId] = useState(tabs[0].id);
     const [rightSidebarHeight, setRightSidebarHeight] = useState(false);
 
     const activeTab = tabs.find((tab) => tab.id === activeTabId);
     const activeContent = activeTab?.content || [];
-    const storeContent = activeTab?.storeContent || [];
 
     return (
         <div className="my-6 p-6 bg-[#b8c7d8] flex flex-col justify-center items-center w-full">
