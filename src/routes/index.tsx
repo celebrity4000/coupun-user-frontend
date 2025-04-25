@@ -1,8 +1,16 @@
 import Layout from '@/components/Layout';
+import UserLayout from '@/components/UserLayout';
 import About from '@/pages/About';
-import Dashboard from '@/pages/Dashboard';
+import Dashboard from '@/pages/Users/Dashboard';
 import Home from '@/pages/Home';
-import Login from '@/pages/Login';
+import Login from '@/pages/Users/LoginPage';
+import Profile from '@/pages/Users/Profile';
+import Tutorials from '@/pages/Users/Tutorials';
+import Tutorial from '@/pages/Users/Tutorial';
+import SignupPage from '@/pages/Users/SignupPage';
+import VerifyAccount from '@/pages/Users/VerifyAccount';
+import EmailOtpVerification from '@/pages/Users/EmailOtpVerification';
+import AddressForm from '@/pages/Users/AddressForm';
 
 
 const routes = [
@@ -14,13 +22,44 @@ const routes = [
         path: '/about',
         element: <Layout><About /></Layout>,
     },
+    //Users authentication routes
     {
-        path: '/login',
+        path: '/user/login',
         element: <Login />,
     },
     {
-        path: '/dashboard',
-        element: <Layout><Dashboard /></Layout>,
+        path: '/user/signup',
+        element: <SignupPage />,
+    },
+    {
+        path: '/user/changeverificationmode',
+        element: <VerifyAccount />,
+    },
+    {
+        path: '/user/emailverification',
+        element: <EmailOtpVerification />,
+    },
+    {
+        path: '/user/address-form',
+        element: <AddressForm />,
+    },
+
+    // User dashboard routes
+    {
+        path: '/user/dashboard',
+        element: <UserLayout><Dashboard /></UserLayout>,
+    },
+    {
+        path: '/user/profile',
+        element: <UserLayout><Profile /></UserLayout>,
+    },
+    {
+        path: '/user/tutorials',
+        element: <UserLayout><Tutorials /></UserLayout>,
+    },
+    {
+        path: '/user/tutorial/:id',
+        element: <UserLayout><Tutorial /></UserLayout>,
     },
 ];
 

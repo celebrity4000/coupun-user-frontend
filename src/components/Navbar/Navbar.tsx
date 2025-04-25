@@ -9,7 +9,7 @@ import { FaSearch } from "react-icons/fa";
 const Navbar: React.FC = () => {
     return (
         <>
-            <div className="flex justify-center items-center bg-navbarBgColor shadow-lg p-3">
+            <div className="flex justify-center items-center bg-navbarBgColor shadow-md border-2 p-3">
                 <div className=" flex justify-between items-center w-full h-[56px]">
                     <NavLink to="/homepage">
                         <div className="font-poppins text-[2em] font-semibold leading-[40px]  decoration-skip-ink-none ml-5">
