@@ -120,7 +120,7 @@ const BillingHistory: FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen pb-10">
+    <div className="bg-white min-h-screen pb-10">
       {/* Header section */}
       <div className="px-4 py-8">
         <h1 className="text-2xl font-bold font-inter">Business Dashboard</h1>
@@ -128,16 +128,14 @@ const BillingHistory: FC = () => {
       </div>
 
       {/* Payment Details Card */}
-      <div className="mx-4 md:mx-6 mb-6 bg-white rounded-lg shadow-sm overflow-hidden">
-        <div className="p-4 pb-0">
-          <h2 className="text-lg font-semibold text-blue-900">
-            Payment Details
-          </h2>
+      <div className="mx-4 md:mx-6 mb-6 bg-white rounded-lg shadow-sm overflow-hidden font-dmsans">
+        <div className="p-4 pb-4">
+          <h2 className="text-2xl font-bold text-[#2B3674]">Payment Details</h2>
         </div>
 
         {/* Table Header */}
-        <div className="grid grid-cols-4 px-4 py-2 border-b text-sm text-gray-500">
-          <div className="flex items-center">
+        <div className="grid grid-cols-4 px-4 py-2 border-b text-sm text-[#A3AED0]">
+          <div className="flex items-center ml-4">
             Name <ChevronDown size={16} className="ml-1" />
           </div>
           <div className="flex items-center">
@@ -163,17 +161,19 @@ const BillingHistory: FC = () => {
           </style>
           {payments.map((payment, index) => (
             <div key={index} className="grid grid-cols-4 px-4 py-3 text-sm">
-              <div className="font-medium text-blue-900">{payment.name}</div>
-              <div>{payment.offer}</div>
-              <div>{payment.date}</div>
-              <div className="text-right font-medium">{payment.amount}</div>
+              <div className="font-medium text-[#2B3674]">{payment.name}</div>
+              <div className="text-[#2B3674]">{payment.offer}</div>
+              <div className="text-[#2B3674]">{payment.date}</div>
+              <div className="text-right font-medium text-[#2B3674]">
+                {payment.amount}
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Weekly Payments Card */}
-      <div className="mx-4 md:mx-6 bg-white rounded-lg shadow-sm overflow-hidden p-4">
+      <div className="mx-4 md:mx-6 bg-white rounded-lg shadow-sm overflow-hidden p-4 font-dmsans">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-lg font-semibold text-blue-900">
             Weekly Payments

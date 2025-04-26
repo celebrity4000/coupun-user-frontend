@@ -17,6 +17,7 @@ import PerformanceDashboard from "@/pages/Client/PerformanceDashboard";
 import ProfilePage from "@/pages/Client/ProfilePage";
 import BillingHistory from "@/pages/Client/BillingHistory";
 import Subscription from "@/pages/Client/Subscription";
+import Tickets from "@/pages/Client/Tickets";
 
 const routes = [
   {
@@ -109,7 +110,7 @@ const routes = [
     ),
   },
   {
-    path: "/client/profile",
+    path: "/client/account/profile",
     element: (
       <ClientLayout>
         <ProfilePage />
@@ -117,10 +118,18 @@ const routes = [
     ),
   },
   {
-    path: "/client/billinghistory",
+    path: "/client/account/billinghistory",
     element: (
       <ClientLayout>
         <BillingHistory />
+      </ClientLayout>
+    ),
+  },
+  {
+    path: "/client/account/tickets",
+    element: (
+      <ClientLayout>
+        <Tickets />
       </ClientLayout>
     ),
   },
